@@ -14,13 +14,13 @@
 #' Fonction mère de l'agrégation temporelles par moyenne normale des UT
 #' @param Data_TS Data : must have columns :
 #' \itemize{
-#' Year : integer for year
-#' Month : interger for season (could be day, week, month etc)
-#' Site : Sites at which data is available
-#' Param : Parameter for which data is available
-#' Val : value of parameter at site at year y at month m
-#' Latitude : coordinates in decimal
-#' Longitude : coordinates in decimal
+#'  \item Year : integer for year
+#'  \item Month : interger for season (could be day, week, month etc)
+#'  \item Site : Sites at which data is available
+#'  \item Param : Parameter for which data is available
+#'  \item Val : value of parameter at site at year y at month m
+#'  \item Latitude : coordinates in decimal
+#'  \item Longitude : coordinates in decimal
 #' }
 #' @param agg.func Texte : fonction pour aggréger
 #' @param year.min Numérique : Année min
