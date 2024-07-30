@@ -27,22 +27,22 @@ autoread <- function(x, verbose=F,...){
   enc <- invisible(detect_file_encoding(x, verbose=verbose))
   enc <- as.character(as.data.frame(enc$OUT_clean[1,"encoding"]))
 
-  # d?tection du s?parateur
+  # détection du séparateur
   sep <- names(which.max(sapply(seps, function(y){
                                   a=tryCatch(ncol(read.csv(x, encoding = enc, sep=y, nrows = 10,...)), error=function(e) NULL)
-                                  if(is.null(a)) a<-0
+                                  if(is.null(a)) a <- 0
                                   return(a)
                                 }
   )))
   
   
-  # d?tection de la d?cimale
+  # détection de la décimale
   dat = read.csv(x, encoding = enc, sep=sep, nrows = 10, dec=".",...)
   
   d = sapply(1:nrow(dat), function(x) grep(pattern = "\\.", x = dat[x,]))
   d[sapply(d, length) == 0] <- 0
   
-  cols.a.verif <- as.numeric(names(which(table(unlist(d)) == max(table(unlist(d)))))) # pas les 10 premi?res colonnes
+  cols.a.verif <- as.numeric(names(which(table(unlist(d)) == max(table(unlist(d)))))) # pas les 10 premières colonnes
   
   type <- names(which.max(table(sapply(cols.a.verif, function(x){class(dat[,x])}))))
   

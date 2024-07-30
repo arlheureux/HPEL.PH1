@@ -7,7 +7,7 @@
 get.mks(Data_TS_ok)
 }
 \arguments{
-\item{Data_TS_ok}{Le tableau de données ÃƒÂ  utiliser}
+\item{Data_TS_ok}{Le tableau de données à utiliser}
 }
 \value{
 Les résultats du mann kendall saisonnier

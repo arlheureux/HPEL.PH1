@@ -16,6 +16,7 @@
 #' @param simulate.p.value cf fonction chisq.test
 #' @param B : cf fonction chisq.test
 #' @return Le résultats du chi2
+#' @import stats
 #
 ## ---------------------------
 

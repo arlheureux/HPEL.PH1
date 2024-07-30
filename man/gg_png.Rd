@@ -31,7 +31,7 @@ gg_png(
 
 \item{path}{Le chemin de sauvegarde}
 
-\item{verose}{Ecrire les sorties images ou non}
+\item{verbose}{Ecrire les sorties images ou non}
 }
 \value{
 Un plot sauvegardé au chemin spécifié

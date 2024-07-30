@@ -12,7 +12,7 @@
 ## _________________ Notes
 #
 #' Fonction qui récupère les résultats du mann kendall saisonnier
-#' @param Data_TS_ok Le tableau de données ÃƒÂ  utiliser
+#' @param Data_TS_ok Le tableau de données à utiliser
 #' @return Les résultats du mann kendall saisonnier
 #
 ## ---------------------------
@@ -42,7 +42,7 @@ get.mks <- function(Data_TS_ok) {
           Dates = data.x$YearTS
         )
 
-        # Au cas ou si ÃƒÂ§a sort NA
+        # Au cas ou si ça sort NA
         mksm$p.value.s[is.na(mksm$p.value.s)] <- 1
         # mksm$p.value.s
         # mksm$p.value
@@ -58,9 +58,6 @@ get.mks <- function(Data_TS_ok) {
            data.x = data.x
          )
       }
-
-
-
 
       xs <- paste(x, s, sep = "_")
       names <- c(names, xs)

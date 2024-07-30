@@ -1,9 +1,9 @@
-## _________________ Infos générales
+## _________________ Infos gÃ©nÃ©rales
 ## Nom : gg_png.R
 ## Auteur : Arnaud Lheureux
 ## Email: arnaud.lheureux@sorbonne-universite.fr
 ##
-## Date de création : 18 juin 2024
+## Date de crÃ©ation : 18 juin 2024
 ##
 ## Copyright (c) Arnaud Lheureux, 2024
 ## R version : 4.4
@@ -14,13 +14,13 @@
 #' Fonction qui sauve un gpglot
 #' @param GG_plot Le ggplot
 #' @param filename Le nom sous lequel le sauver
-#' @param width La largeur de l'image. Par défaut 30cm
-#' @param height La hauteur de l'image. Par défaut 20cm
-#' @param units L'unité des hauteur et largeur. Par défaut cm
-#' @param res La résolution de l'image
+#' @param width La largeur de l'image. Par dÃ©faut 30cm
+#' @param height La hauteur de l'image. Par dÃ©faut 20cm
+#' @param units L'unitÃ© des hauteur et largeur. Par dÃ©faut cm
+#' @param res La rÃ©solution de l'image
 #' @param path Le chemin de sauvegarde
 #' @param verbose Ecrire les sorties images ou non
-#' @return Un plot sauvegardé au chemin spécifié
+#' @return Un plot sauvegardÃ© au chemin spÃ©cifiÃ©
 #' @export 
 #
 ## ---------------------------
@@ -45,13 +45,13 @@ gg_png <- function(GG_plot, filename, width = 30, height = 20, units = "cm", res
   if (verbose) {
     if (is.null(path)) {
       cat(
-        "\nImage sauvée dans", getwd(), ":)", "\n", "Largeur =", paste0(width, units),
-        "Hauteur =", paste0(height, units), "Résolution =", res, "\n"
+        "\nImage sauvÃ©e dans", getwd(), ":)", "\n", "Largeur =", paste0(width, units),
+        "Hauteur =", paste0(height, units), "RÃ©solution =", res, "\n"
       )
     } else {
       cat(
-        "\nImage sauvée dans", path, ":)", "\n", "Largeur =", paste0(width, units),
-        "Hauteur =", paste0(height, units), "Résolution =", res, "\n"
+        "\nImage sauvÃ©e dans", path, ":)", "\n", "Largeur =", paste0(width, units),
+        "Hauteur =", paste0(height, units), "RÃ©solution =", res, "\n"
       )
     }
   }

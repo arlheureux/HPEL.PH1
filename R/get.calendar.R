@@ -14,6 +14,7 @@
 #' Fonction qui crée un calendrier
 #' @param from Numérique : année du début du calender au format yyyy
 #' @param to Numérique : année du début du calender au format yyyy
+#' @import lubridate
 #' @return Le caldendrier
 #
 ## ---------------------------

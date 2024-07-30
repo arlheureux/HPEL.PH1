@@ -2,7 +2,7 @@
 % Please edit documentation in R/id.year.a.enlever.R
 \name{remove.years}
 \alias{remove.years}
-\title{Fonction qui enlÃƒÂ¨ve les années/mois pour lesquelles l'évaluation n'est pas possible}
+\title{Fonction qui enlève les années/mois pour lesquelles l'évaluation n'est pas possible}
 \usage{
 remove.years(
   Data_TS_month,
@@ -24,5 +24,5 @@ remove.years(
 Les données avec les années / mois en NA
 }
 \description{
-Fonction qui enlÃƒÂ¨ve les années/mois pour lesquelles l'évaluation n'est pas possible
+Fonction qui enlève les années/mois pour lesquelles l'évaluation n'est pas possible
 }

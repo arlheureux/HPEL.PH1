@@ -2,7 +2,7 @@
 % Please edit documentation in R/get.quantile.ano.R
 \name{get.anomalies.extreme.dates}
 \alias{get.anomalies.extreme.dates}
-\title{Fonction qui récupÃƒÆ’Ã‚Â¨re les valeurs des anomalies extremes}
+\title{Fonction qui récupère les valeurs des anomalies extremes}
 \usage{
 get.anomalies.extreme.dates(Anomalies.R, Anomalies.E, quantiles)
 }
@@ -17,5 +17,5 @@ get.anomalies.extreme.dates(Anomalies.R, Anomalies.E, quantiles)
 Les anomalies extremes
 }
 \description{
-Fonction qui récupÃƒÆ’Ã‚Â¨re les valeurs des anomalies extremes
+Fonction qui récupère les valeurs des anomalies extremes
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/get.quantile.ano.R
 \name{get.quantile.ano}
 \alias{get.quantile.ano}
-\title{Fonction qui récupÃƒÆ’Ã‚Â¨re les quantiles des anomalies}
+\title{Fonction qui récupère les quantiles des anomalies}
 \usage{
 get.quantile.ano(x, xsup, na.rm = T)
 }
@@ -17,5 +17,5 @@ get.quantile.ano(x, xsup, na.rm = T)
 Les seuils d'anomalies
 }
 \description{
-Fonction qui récupÃƒÆ’Ã‚Â¨re les quantiles des anomalies
+Fonction qui récupère les quantiles des anomalies
 }

@@ -12,7 +12,7 @@
 
 ## _________________ Notes
 #
-#' Fonction qui récupÃƒÆ’Ã‚Â¨re les quantiles des anomalies
+#' Fonction qui récupère les quantiles des anomalies
 #' @param x Anomalies de la prériode de référence
 #' @param xsup Anomalies de la période d'évaluation
 #' @param na.rm Logique : enlever les NA
@@ -45,7 +45,7 @@ get.quantile.ano <- function(x, xsup, na.rm = T){
 
 ## _________________ Notes
 #
-#' Fonction qui récupÃƒÆ’Ã‚Â¨re les fréquences des anomalies
+#' Fonction qui récupère les fréquences des anomalies
 #' @param Anomalies.R Anomalies de la prériode de référence
 #' @param Anomalies.E Anomalies de la période d'évaluation
 #' @param quantiles quantiles issus de get.quantile.ano
@@ -85,7 +85,7 @@ get.anomalies.freq <- function(Anomalies.R, Anomalies.E, quantiles) {
 
 ## _________________ Notes
 #
-#' Fonction qui récupÃƒÆ’Ã‚Â¨re les valeurs des anomalies extremes
+#' Fonction qui récupère les valeurs des anomalies extremes
 #' @param Anomalies.R Anomalies de la prériode de référence
 #' @param Anomalies.E Anomalies de la période d'évaluation
 #' @param quantiles quantiles issus de get.quantile.ano
@@ -118,7 +118,7 @@ get.anomalies.extreme.dates <- function(Anomalies.R, Anomalies.E, quantiles) {
 
 ## _________________ Notes
 #
-#' Fonction qui récupÃƒÆ’Ã‚Â¨re les fréquences d'anomalies annuelles
+#' Fonction qui récupère les fréquences d'anomalies annuelles
 #' @param Anomalies.R Anomalies de la prériode de référence
 #' @param Anomalies.E Anomalies de la période d'évaluation
 #' @param quantiles quantiles issus de get.quantile.ano

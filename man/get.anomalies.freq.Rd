@@ -2,7 +2,7 @@
 % Please edit documentation in R/get.quantile.ano.R
 \name{get.anomalies.freq}
 \alias{get.anomalies.freq}
-\title{Fonction qui récupÃƒÆ’Ã‚Â¨re les fréquences des anomalies}
+\title{Fonction qui récupère les fréquences des anomalies}
 \usage{
 get.anomalies.freq(Anomalies.R, Anomalies.E, quantiles)
 }
@@ -17,5 +17,5 @@ get.anomalies.freq(Anomalies.R, Anomalies.E, quantiles)
 Les fréquences d'anomalies
 }
 \description{
-Fonction qui récupÃƒÆ’Ã‚Â¨re les fréquences des anomalies
+Fonction qui récupère les fréquences des anomalies
 }

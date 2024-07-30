@@ -47,17 +47,10 @@ id.year.enlever <- function(Data_TS_month, nb.mois.min, nb.cores = detectCores()
       )
     )
 
-
-
-
-
-
-
-
-    cat("Il faut enlever les années suivantes pour les paramÃƒÂ¨tres suivants\n\n")
+    cat("Il faut enlever les années suivantes pour les paramètres suivants\n\n")
     print(Year.a.enlever)
   }else{
-    cat("Toutes les années comportent au minimum la proportion définie, et ce pour tous les paramÃƒÂ¨tres\n\n")
+    cat("Toutes les années comportent au minimum la proportion définie, et ce pour tous les paramètres\n\n")
   }
   
   
@@ -69,7 +62,7 @@ id.year.enlever <- function(Data_TS_month, nb.mois.min, nb.cores = detectCores()
 
 ## _________________ Notes
 #
-#' Fonction qui enlÃƒÂ¨ve les années/mois pour lesquelles l'évaluation n'est pas possible
+#' Fonction qui enlève les années/mois pour lesquelles l'évaluation n'est pas possible
 #' @param Data_TS_month Les données
 #' @param Year.a.enlever Dataframe issu de id.year.enlever()
 #' @param prop.annee.mini proportion d'année mini pour la période d'évaluation
@@ -83,12 +76,12 @@ remove.years <- function(Data_TS_month, Year.a.enlever, prop.annee.mini, nb.core
     
     Data_TS_month_year_ok <- Data_TS_month
     Data_TS_month_year_ok$keep <- TRUE
-    cat("Il n'y a rien ÃƒÂ  faire ici")
+    cat("Il n'y a rien à faire ici")
     
   }else{
     
     
-    # J'enlÃƒÂ¨ve les années correspondantes
+    # J'enlève les années correspondantes
     Data_TS_month$keep <- TRUE
 
 
@@ -135,7 +128,7 @@ remove.years <- function(Data_TS_month, Year.a.enlever, prop.annee.mini, nb.core
     
     boxplot(unique(Data_TS_month_year_ok$Prop_year_elim), main = "Proportion des séries éliminées")
     
-    # J'enlÃƒÂ¨ve les paramÃƒÂ¨tres dont on ne conserve moins de la proportion d'année limite
+    # J'enlève les paramètres dont on ne conserve moins de la proportion d'année limite
     Data_TS_month_year_ok <- Data_TS_month_year_ok[Data_TS_month_year_ok$Prop_year_elim < prop.annee.mini,]
   }
 
