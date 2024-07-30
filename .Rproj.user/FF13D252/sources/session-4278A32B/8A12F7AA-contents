@@ -48,7 +48,7 @@ use_github()
 setwd("/home/arnaud/storage/GELATINE/R_HPEL/HPEL.PH1/")
 #system("git init")
 system("git add .")
-system('git commit -m "first commit"')
+system('git commit -m ""')
 system("git branch -M main")
 #system("git remote add origin https://github.com/arlheureux/HPEL.PH1.git")
 
