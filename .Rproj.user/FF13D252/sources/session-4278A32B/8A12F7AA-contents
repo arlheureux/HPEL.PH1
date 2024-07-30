@@ -42,6 +42,9 @@ roxygenise()
 build()
 
 # Push on github
+use_github()
+
+
 setwd("/home/arnaud/storage/GELATINE/R_HPEL/HPEL.PH1/")
 #system("git init")
 system("git add .")
