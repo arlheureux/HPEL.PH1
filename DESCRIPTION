@@ -32,12 +32,13 @@ Imports:
     ggh4x,
     progress,
     gridtext,
-    pbmcapply,
-    rnaturalearthdata,
-    rnaturalearthhires,
-    rnaturalearth,
-    threadr,
-    ggpattern,
-    ggConvexHull
+    pbmcapply
+Remotes:
+    ropensci/rnaturalearthdata,
+    ropensci/rnaturalearthhires,
+    ropensci/rnaturalearth,
+    skgrange/threadr,
+    coolbutuseless/ggpattern,
+    cmartin/ggConvexHull
 URL: https://github.com/arlheureux/HPEL.PH1
 BugReports: https://github.com/arlheureux/HPEL.PH1/issues
