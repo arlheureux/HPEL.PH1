@@ -39,3 +39,5 @@ Imports:
     threadr,
     ggpattern,
     ggConvexHull
+URL: https://github.com/arlheureux/HPEL.PH1
+BugReports: https://github.com/arlheureux/HPEL.PH1/issues
