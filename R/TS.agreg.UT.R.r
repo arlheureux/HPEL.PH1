@@ -13,7 +13,7 @@
 #
 #' Fonction mère de l'agrégation temporelles par moyenne normale des UT
 #' @param Data_TS Data : must have columns :
-#' \itemsize{
+#' \itemize{
 #' Year : integer for year
 #' Month : interger for season (could be day, week, month etc)
 #' Site : Sites at which data is available
