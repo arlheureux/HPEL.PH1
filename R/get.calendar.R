@@ -20,9 +20,9 @@
 ## ---------------------------
 
 get.calendar <- function(from, to) {
-  
+
   if(is.numeric(from) & is.numeric(to)){
-    
+
     Date <- seq(date_decimal(from, tz = 'Europe/Paris'), date_decimal(to+1, tz = "Europe/Paris"), by = "day")
     Jour <- day(Date)
     Mois <- month(Date)
@@ -30,16 +30,18 @@ get.calendar <- function(from, to) {
     Jour_julien <- as.numeric(julian(Date))
     Date_decimale <- decimal_date(Date)
   }
-  
-  
+
+
+
+
   out <- data.frame(Date_decimale = Date_decimale,
                     Jour = Jour,
                     Mois = Mois,
                     Annee = Annee,
                     Jour_julien = Jour_julien,
                     Date = Date)
-  
+
   return(out)
-  
-  
+
+
 }
