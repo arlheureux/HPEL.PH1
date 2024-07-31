@@ -25,6 +25,7 @@
 #' @param groupe Le type de la base de données utilisée
 #' @return Des plots
 #' @import ggh4x ggrepel cowplot
+#' @importFrom ggplot2 theme_minimal
 #' @export
 #
 ## ---------------------------
