@@ -70,7 +70,7 @@ id.year.enlever <- function(Data_TS_month, nb.mois.min, nb.cores = detectCores()
 #' @return Les données avec les années / mois en NA
 #
 ## ---------------------------
-remove.years <- function(Data_TS_month, Year.a.enlever, prop.annee.mini, nb.cores = detectCores()/2) {
+remove.years <- function(Data_TS_month, Year.a.enlever, prop.annee.mini, nb.cores = detectCores()/2, range.year) {
   
   if(nrow(Year.a.enlever) == 1 & sum(is.na(Year.a.enlever)) == ncol(Year.a.enlever)) {
     
@@ -108,7 +108,7 @@ remove.years <- function(Data_TS_month, Year.a.enlever, prop.annee.mini, nb.core
 
     Data_TS_month_year_ok <- do.call(
       "rbind",
-      pbmclapply(
+      pbmcapply::pbmclapply(
         mc.cores = nb.cores,
         unique(Data_TS_month_year_ok$Serie),
         function(p) {
