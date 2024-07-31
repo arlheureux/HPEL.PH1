@@ -32,7 +32,8 @@ Imports:
     ggh4x,
     progress,
     gridtext,
-    pbmcapply
+    pbmcapply,
+    ggplot2
 Remotes:
     ropensci/rnaturalearthdata,
     ropensci/rnaturalearthhires,
