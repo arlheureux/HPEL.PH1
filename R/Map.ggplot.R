@@ -17,6 +17,8 @@
 #' @param proj.to Numerique : epsg du système vers lequel projeter
 #' @param already.proj Logical : les données sont-elles deja au systeme vers lequel projeter
 #' @return Un fond de carte
+#' @import sf rnaturalearth rnaturalearthdata rnaturalearthhires
+#' @importFrom ggplot2 geom_sf element_rect
 #' @export
 #
 ## ---------------------------

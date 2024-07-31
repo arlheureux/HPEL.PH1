@@ -14,12 +14,14 @@ Moyennes.verticales(
 }
 \arguments{
 \item{data}{data.frame avec les données, il faut au moins les colonnes : 
-- Depth avec des profondeurs
-- id.profil avec un identifiant unique pour les profils
-- Year = les années
-- Month = les mois
-- YearTS = date au format décimal
-- des paramÃƒÂ¨tres}
+\itemize{
+ \item Depth : integer for depth
+ \item id.profil : unique identifier
+ \item Year : interger year
+ \item Month : integer month
+ \item YearTS : decimale data
+ \item A bunch of parameters : coordinates in decimal
+}}
 
 \item{col.param}{: les numéros de colonne des paramÃƒÂ¨tres}
 

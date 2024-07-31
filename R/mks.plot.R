@@ -24,6 +24,7 @@
 #' @param res.mks.UT Les résultats du mann kendall saisonnier avec les UT en param
 #' @param groupe Le type de la base de données utilisée
 #' @return Des plots
+#' @import ggh4x ggrepel cowplot
 #' @export
 #
 ## ---------------------------

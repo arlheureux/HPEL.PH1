@@ -13,8 +13,9 @@
 #
 #' Fonction qui lit et charge les données PhytoCly
 #' @param xlsx Le chemin vers les données
-#' @param nsheet Le nombre de feuilles ÃƒÂ  prendre
+#' @param nsheet Le nombre de feuilles à prendre
 #' @return Les données PhytoCly
+#' @importFrom progress progress_bar
 #
 ## ---------------------------
 

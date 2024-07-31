@@ -42,5 +42,5 @@ Les données agrégées
 Fonction mère de l'agrégation temporelles par moyenne normale des UT
 }
 \examples{
-TS.agreg.UT(Data_TS = data, agg.func = "mean", year.min = 1980, year.max = 2020, season = 1:12, nb.cores = detectCores()/2)
+TS.agreg.UT(Data_TS = data, agg.func = "mean", year.min = 1980, year.max = 2020, season = 1:12, nb.cores = 1)
 }

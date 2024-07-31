@@ -20,6 +20,7 @@
 #' @param melt Logique afin de transformer ou pas les données burtes (pourrait ÃƒÂªtre fait avant la fonction..)
 #' @param ds Dataset : spécifier de quelle origine sont les données afin de configurer les unités
 #' @return Des plots
+#' @import ggh4x ggrepel cowplot
 #
 ## ---------------------------
 

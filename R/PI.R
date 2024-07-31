@@ -20,6 +20,7 @@
 #' @param outer Logique : faut-il considérer l'enveloppe externe. Par défaut TRUE.
 #' @param inner Logique : faut-il considérer l'enveloppe interne. Par défaut TRUE. 
 #' @return les enveloppes du PI
+#' @import grDevices
 #
 ## ---------------------------
 
@@ -148,6 +149,7 @@ get.PI.hull <- function(xR, yR, p, outer = TRUE, inner = TRUE) {
 #' @param PI.hull Résultats de la fonction get.PI.hull().
 #' @param p Numérique : la valeur de p é considérer pour évaluer les enveloppes.
 #' @return Les valeurs du PI
+#' @import pracma
 #
 ## ---------------------------
 
@@ -205,8 +207,6 @@ PI.calc <- function(xE, yE, PI.hull, p) {
 
 ## _________________ Notes
 #
-# La fonction PI.calc est inspiré des travaux de
-# Holland et Ndah fait dans le cadre d'OSPAR
 #' Fonction qui fait les plots du PI
 #' @param dataR data.frame : Données de la période de référence
 #' @param dataE data.frame : Données de la période d'évaluation
@@ -218,11 +218,15 @@ PI.calc <- function(xE, yE, PI.hull, p) {
 #' @param GF1 Groupe fonctionnel 1
 #' @param GF2 Groupe fonctionnel 2
 #' @return les plots du PI
+#' @importFrom ggplot2 scale_color_identity xlab ylab geom_path scale_color_gradientn
+#' @importFrom grDevices colorRampPalette
+#' @importFrom wesanderson wes_palette
+#' @import ggConvexHull gridtext grid gridExtra
 #
 ## ---------------------------
 
 # Plot du PI
-PI.plot <- function(dataR, dataE, col, ds = NULL, PI.hull, PI, path = OUT, GF1, GF2) {
+PI.plot <- function(dataR, dataE, col, ds = NULL, PI.hull, PI, path, GF1, GF2, duree.eval) {
   
   Rx <- range(dataE$GF1, dataR$GF1)
   Ry <- range(dataE$GF2, dataR$GF2)
@@ -230,7 +234,8 @@ PI.plot <- function(dataR, dataE, col, ds = NULL, PI.hull, PI, path = OUT, GF1, 
   Rx <- c(.9*Rx[1],1.1*Rx[2])
   Ry <- c(.9*Ry[1],1.1*Ry[2])
   
- 
+  Colors <- colorRampPalette(c("#4d4dff", "#00997a", "#ffaa00", "#e60064", "#4d4dff"))(12 + 1)[1:12]
+
   if(col == "Month") {
     color2 <- color1 <- color <- Colors
   }
@@ -376,8 +381,6 @@ gR
 
 ## _________________ Notes
 #
-# La fonction PI.calc est inspiré des travaux de
-# Holland et Ndah fait dans le cadre d'OSPAR
 #' Fonction qui fait les plots du PI anomalies
 #' @param dataR data.frame : Données de la période de référence
 #' @param dataE data.frame : Données de la période d'évaluation
@@ -388,11 +391,13 @@ gR
 #' @param GF1 Groupe fonctionnel 1
 #' @param GF2 Groupe fonctionnel 2
 #' @return les plots du PI
+#' @importFrom ggplot2 scale_color_identity xlab ylab geom_path
+#' @import ggConvexHull gridtext
 #
 ## ---------------------------
 
 # Plot du PI
-PI.anomalies.plot <- function(dataR, dataE, ds = NULL, PI.hull, PI, path = OUT, GF1, GF2) {
+PI.anomalies.plot <- function(dataR, dataE, ds = NULL, PI.hull, PI, path, GF1, GF2) {
   Rx <- range(dataE$GF1, dataR$GF1)
   Ry <- range(dataE$GF2, dataR$GF2)
 

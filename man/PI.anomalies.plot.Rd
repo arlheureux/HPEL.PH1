@@ -4,7 +4,7 @@
 \alias{PI.anomalies.plot}
 \title{Fonction qui fait les plots du PI anomalies}
 \usage{
-PI.anomalies.plot(dataR, dataE, ds = NULL, PI.hull, PI, path = OUT, GF1, GF2)
+PI.anomalies.plot(dataR, dataE, ds = NULL, PI.hull, PI, path, GF1, GF2)
 }
 \arguments{
 \item{dataR}{data.frame : Données de la période de référence}

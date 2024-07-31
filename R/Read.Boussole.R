@@ -16,6 +16,8 @@
 #' @param sheet Le numéro de la feuille avec les données
 #' @param year.max Année max a considérer
 #' @return Les données boussole
+#' @importFrom data.table uniqueN
+#' @importFrom stringr str_sub str_to_sentence
 #
 ## ---------------------------
 

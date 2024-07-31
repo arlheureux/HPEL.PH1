@@ -4,7 +4,7 @@ Title: Code for MSFD D1-Biodiversity PH1
 Version: 0.1.0
 Author: Arnaud Lheureux
 Maintainer: The package maintainer <arnaud.lheureux@sorbonne-universite.fr>
-Description: Code for all PH1 based on abundance and pygment data
+Description: Code for all PH1 based on abundance and pygment data.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
@@ -12,28 +12,39 @@ RoxygenNote: 7.3.2
 Depends: 
     R (>= 4.0)
 Imports:
-    tidyverse,
-    varhandle,
-    lubridate,
+    cli,
+    cowplot,
     data.table,
-    parallel,
-    sf,
-    zoo,
-    grid,
-    wesanderson,
-    plyr,
+    dplyr,
+    EnvStats,
+    ggConvexHull,
+    ggh4x,
     ggnewscale,
-    colorRamps,
-    gridExtra,
-    pracma,
+    ggplot2,
     ggpubr,
     ggrepel,
-    EnvStats,
-    ggh4x,
-    progress,
+    grDevices,
+    grid,
+    gridExtra,
     gridtext,
+    lubridate,
+    pak,
+    parallel,
     pbmcapply,
-    ggplot2
+    plyr,
+    pracma,
+    progress,
+    purrr,
+    readr,
+    readxl,
+    rnaturalearth,
+    rnaturalearthdata,
+    rnaturalearthhires,
+    reshape2,
+    sf,
+    stringi,
+    stringr,
+    wesanderson
 Remotes:
     ropensci/rnaturalearthdata,
     ropensci/rnaturalearthhires,

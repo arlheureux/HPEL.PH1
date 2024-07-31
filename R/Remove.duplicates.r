@@ -24,7 +24,7 @@ Remove.duplicates <- function(data, nb.cores = detectCores()/2) {
 
     out <- do.call(
         "rbind",
-        pbmclapply(
+        pbmcapply::pbmclapply(
             mc.cores = nb.cores, 
             unique(data$Serie),
             function(s) {

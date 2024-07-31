@@ -4,7 +4,7 @@
 \alias{PI.plot}
 \title{Fonction qui fait les plots du PI}
 \usage{
-PI.plot(dataR, dataE, col, ds = NULL, PI.hull, PI, path = OUT, GF1, GF2)
+PI.plot(dataR, dataE, col, ds = NULL, PI.hull, PI, path, GF1, GF2, duree.eval)
 }
 \arguments{
 \item{dataR}{data.frame : Données de la période de référence}

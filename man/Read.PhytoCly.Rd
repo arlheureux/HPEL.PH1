@@ -9,7 +9,7 @@ Read.PhytoCly(xlsx, nsheet)
 \arguments{
 \item{xlsx}{Le chemin vers les données}
 
-\item{nsheet}{Le nombre de feuilles ÃƒÂ  prendre}
+\item{nsheet}{Le nombre de feuilles à prendre}
 }
 \value{
 Les données PhytoCly

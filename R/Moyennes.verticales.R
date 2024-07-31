@@ -13,18 +13,20 @@
 #
 #' Fonction qui prépare les données pour la moyenne intégrée sur les jours juliens
 #' @param data data.frame avec les données, il faut au moins les colonnes : 
-#'         - Depth avec des profondeurs
-#'         - id.profil avec un identifiant unique pour les profils
-#'         - Year = les années
-#'         - Month = les mois
-#'         - YearTS = date au format décimal
-#'         - des paramÃƒÂ¨tres
-#'
+#' \itemize{
+#'  \item Depth : integer for depth
+#'  \item id.profil : unique identifier
+#'  \item Year : interger year
+#'  \item Month : integer month
+#'  \item YearTS : decimale data
+#'  \item A bunch of parameters : coordinates in decimal
+#' }
 #' @param col.param : les numéros de colonne des paramÃƒÂ¨tres
 #' @param profondeur.mini : la profondeur minimal requise pour traiter le profil
 #' @param nb.profondeur.mini : le nombre de profonderus mini dans le profil pour le traiter
 #' @param nb.cores : le nombre de coeurs du processeur sur lesquels paralléliser. Par défaut = la moitié
 #' @return Un dataframe avec les valeurs intégrées
+#' @importFrom data.table uniqueN
 #
 ## ---------------------------
 

@@ -15,6 +15,7 @@
 #' Fonction qui change les mois décimaux en mois en texte
 #' @param x Un vecteur numérique de mois
 #' @return Les données phyto ok
+#' @importFrom plyr revalue
 #
 ## ---------------------------
 
@@ -29,7 +30,7 @@ revalue(x,
         "5" = "Mai",
         "6" = "Juin",
         "7" = "Juillet",
-        "8" = "AoÃƒÆ’Ã‚Â»t",
+        "8" = "Août",
         "9" = "Septembre",
         "10" = "Octobre",
         "11" = "Novembre",
