@@ -199,25 +199,16 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
         colnames(Data_full_melt)[colnames(Data_full_melt) == "Val"] <- "value"
       }
 
+      # Petite modif pour check de colonnes
+      if (!"YearTS" %in% colnames(Data_full_melt) & "Date" %in% colnames(Data_full_melt)) {
+        Data_full_melt$YearTS <- Data_full_melt$Date
+      }
+
+
       Data_full_melt <- Data_full_melt[Data_full_melt$variable == x & Data_full_melt$Site == s &
         Data_full_melt$YearTS < year.max + 1, ]
       Data_full_melt$Month <- month(date_decimal(Data_full_melt$YearTS, tz = "Europe/Paris"))
-      Data_full_melt$Month <- revalue(as.factor(Data_full_melt$Month),
-        replace = c(
-          "1" = "Janvier",
-          "2" = "Février",
-          "3" = "Mars",
-          "4" = "Avril",
-          "5" = "Mai",
-          "6" = "Juin",
-          "7" = "Juillet",
-          "8" = "Août",
-          "9" = "Septembre",
-          "10" = "Octobre",
-          "11" = "Novembre",
-          "12" = "Décembre"
-        )
-      )
+      Data_full_melt$Month <- Mois.text(Data_full_melt$Month)
 
 
       if (length(seq(min(data.x$Year), max(data.x$Year))) < 15) {
