@@ -28,6 +28,7 @@
 #' @param season Numérique : Numéro de saisons. Par défaut 1:12
 #' @param nb.cores Numérique : Nombre de coeurs sur lesquels paralléliser
 #' @return Les données agrégées
+#' @export
 #' @examples 
 #' TS.agreg.UT(Data_TS = data, agg.func = "mean", year.min = 1980, year.max = 2020, season = 1:12, nb.cores = detectCores()/2)
 #

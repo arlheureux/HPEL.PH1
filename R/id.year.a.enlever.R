@@ -13,6 +13,7 @@
 #
 #' Fonction qui identifie les années/mois pour lesquelles l'évaluation n'est pas possible
 #' @param Data_TS_month Les données
+#' @export 
 #' @return Un dataframe avec les années et mois a enlever
 #
 ## ---------------------------
@@ -67,6 +68,7 @@ id.year.enlever <- function(Data_TS_month, nb.mois.min, nb.cores = detectCores()
 #' @param Year.a.enlever Dataframe issu de id.year.enlever()
 #' @param prop.annee.mini proportion d'année mini pour la période d'évaluation
 #' @param nb.cores Nombre de coeurs pour la parallélisation
+#' @export
 #' @return Les données avec les années / mois en NA
 #
 ## ---------------------------

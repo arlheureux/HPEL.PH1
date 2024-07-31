@@ -14,6 +14,7 @@
 #' Sript parent de l'interpolation des valeurs manquantes
 #' @param Data_TS_month_year_ok Les données
 #' @return Les données avec colonnes de valeurs interpolées
+#' @export
 #
 ## ---------------------------
 
@@ -89,6 +90,7 @@ interpo <- function(Data_TS_month_year_ok) {
 #' @param path Chemin de sauvegarde
 #' @importFrom ggplot2 ggplot aes geom_point facet_wrap theme_bw
 #' @return Les données avec colonnes de valeurs interpolées
+#' @export
 #
 ## ---------------------------
 interpo.plot <- function(Data_TS_ok, name = NA, path) {

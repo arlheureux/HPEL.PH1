@@ -14,6 +14,7 @@
 #' Fonction qui récupère les résultats du mann kendall saisonnier
 #' @param Data_TS_ok Le tableau de données à utiliser
 #' @return Les résultats du mann kendall saisonnier
+#' @export
 #
 ## ---------------------------
 

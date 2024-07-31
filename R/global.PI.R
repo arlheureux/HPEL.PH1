@@ -16,6 +16,7 @@
 #' @param GF1 Groupe fonctionnel 1 (doit correspondre a un argument de la colonne Param)
 #' @param GF2 Groupe fonctionnel 2 (doit correspondre a un argument de la colonne Param)
 #' @return Le tableau de données des fractions et biomasses CHLA issues des pigments
+#' @export
 #
 ## ---------------------------
 

@@ -22,7 +22,8 @@
 #' @param chi2 Résultats du chi2
 #' @param path Chemin de sauvegarde des images
 #' @return Plots des anomalies
-#' @import ggplot2 grid ggpubr
+#' @import grid ggpubr ggnewscale
+#' @importFrom ggplot2 ggplot aes xlim ylim geom_rect labs scale_fill_manual scale_color_manual theme_bw theme
 #' @export
 ## ---------------------------
 
@@ -243,7 +244,7 @@ anomalies.plot <- function(Anomalies.R, Anomalies.E, quantiles, year.min, year.m
 #' @param Freq.ano.an data.frame des fréquences des anomalies. Résultats de la fonction get.anomalies.freq.an()
 #' @param path Chemin de sauvegarde des images
 #' @return Plots des fréquences des anomalies
-#' @import ggplot2
+#' @importFrom ggplot2 ggplot aes geom_bar scale_x_continuous theme_bw scale_color_discrete scale_fill_discrete labs geom_line
 #' @export
 ## ---------------------------
 

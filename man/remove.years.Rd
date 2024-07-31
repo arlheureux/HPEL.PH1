@@ -8,7 +8,8 @@ remove.years(
   Data_TS_month,
   Year.a.enlever,
   prop.annee.mini,
-  nb.cores = detectCores()/2
+  nb.cores = detectCores()/2,
+  range.year
 )
 }
 \arguments{

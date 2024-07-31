@@ -4,7 +4,7 @@
 \alias{kendallSeasonalTrendTest.seas.pval}
 \title{Fonction qui fait les résultats du mann kendall saisonnier (pareil que dans package EnvStats avec en plus les pval saisonnières)}
 \usage{
-kendallSeasonalTrendTest.seas.pval(
+\method{kendallSeasonalTrendTest}{seas.pval}(
   y,
   season,
   year,
