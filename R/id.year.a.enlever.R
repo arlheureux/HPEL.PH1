@@ -34,7 +34,7 @@ id.year.enlever <- function(Data_TS_month, nb.mois.min, nb.cores = detectCores()
     
     Year.a.enlever <- do.call(
       "rbind",
-      parallel::pbmclapply(
+      pbmcapply::pbmclapply(
         mc.cores = nb.cores,
         1:nrow(id.non),
         function(i) {
