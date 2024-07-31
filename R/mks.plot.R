@@ -208,7 +208,7 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
       Data_full_melt <- Data_full_melt[Data_full_melt$variable == x & Data_full_melt$Site == s &
         Data_full_melt$YearTS < year.max + 1, ]
       Data_full_melt$Month <- month(date_decimal(Data_full_melt$YearTS, tz = "Europe/Paris"))
-      Data_full_melt$Month <- Mois.text(Data_full_melt$Month)
+      Data_full_melt$Month <- Mois.text(as.factor(Data_full_melt$Month))
 
 
       if (length(seq(min(data.x$Year), max(data.x$Year))) < 15) {
