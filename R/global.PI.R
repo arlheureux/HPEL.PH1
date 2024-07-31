@@ -20,7 +20,7 @@
 #
 ## ---------------------------
 
-global.PI <- function(Data_TS_ok, GF1, GF2, path) {
+global.PI <- function(Data_TS_ok, GF1, GF2, duree.eval, path) {
     
     Data_TS_GF <- Data_TS_ok[Data_TS_ok$Param %in% c(GF1, GF2), ]
     Data_TS_GF$Anomalies <- FALSE
@@ -82,7 +82,7 @@ global.PI <- function(Data_TS_ok, GF1, GF2, path) {
             dataR = df_ref[df_ref$Site == s, ],
             dataE = df_eval[df_eval$Site == s, ],
             ds = "Rephy", GF1 = GF1, GF2 = GF2,
-            col = "Month",
+            col = "Month", duree.eval = duree.eval,
             PI.hull = PI.hull, PI = PI, path = file.path(path, "PI", s, paste(GF1, GF2, sep="_"))
         )
 
@@ -90,7 +90,7 @@ global.PI <- function(Data_TS_ok, GF1, GF2, path) {
             dataR = df_ref[df_ref$Site == s, ],
             dataE = df_eval[df_eval$Site == s, ],
             ds = "Rephy", GF1 = GF1, GF2 = GF2,
-            col = "Year",
+            col = "Year", duree.eval = duree.eval,
             PI.hull = PI.hull, PI = PI, path = file.path(path, "PI", s, paste(GF1, GF2, sep="_"))
         )
 

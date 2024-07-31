@@ -258,7 +258,7 @@ PI.plot <- function(dataR, dataE, col, ds = NULL, PI.hull, PI, path, GF1, GF2, d
     geom_convexhull(data = PI.hull$EnvInner, aes(inX, inY), fill=NA, col="black") +  
     xlim(Rx) + ylim(Ry) + 
     theme_bw() +
-    labs(col = "AnnÃƒÆ’Ã‚Â©es") +
+    labs(col = "Années") +
     theme(legend.position = "bottom",
     legend.key.width = unit(1, "cm"))
 gR  
@@ -274,7 +274,7 @@ gR
     # annotate("label", x = 5.5, y = 5.3,  label=paste0("PI = ", round(PI,2), "\nPoints = ", N, "\nBinom p = ", 
     #                                                   round(Actual_p,2), "\nChi-sq = ", round(chi2,2))) +
     theme_bw() + 
-    labs(col = "AnnÃƒÆ’Ã‚Â©es") +
+    labs(col = "Années") +
     theme(legend.position = "bottom",
     legend.key.width = unit(1, "cm"))
   

@@ -4,7 +4,7 @@
 \alias{global.PI}
 \title{Fonction qui sort le tableau des tailles basé sur les pigments}
 \usage{
-global.PI(Data_TS_ok, GF1, GF2, path)
+global.PI(Data_TS_ok, GF1, GF2, duree.eval, path)
 }
 \arguments{
 \item{Data_TS_ok}{Tableau de données}
