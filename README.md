@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of HPEL.PH1 is to provide code for the MFSD Descriptio
+The goal of HPEL.PH1 is to provide code for the MFSD Descriptor
 D1-Biodiversity PH1 indicators in the French Mediterranean from pygments
 or abundance data
 

@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of HPEL.PH1 is to provide code for the MFSD Descriptio D1-Biodiversity PH1 indicators in the French Mediterranean from pygments or abundance data
+The goal of HPEL.PH1 is to provide code for the MFSD Descriptor D1-Biodiversity PH1 indicators in the French Mediterranean from pygments or abundance data
 
 ## Installation
 
