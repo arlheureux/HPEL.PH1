@@ -87,7 +87,7 @@ interpo <- function(Data_TS_month_year_ok) {
 #' @param Data_TS_ok Les données
 #' @param name Nom donné à l'image
 #' @param path Chemin de sauvegarde
-#' @import ggplot2
+#' @importFrom ggplot2 ggplot aes geom_point facet_wrap theme_bw
 #' @return Les données avec colonnes de valeurs interpolées
 #
 ## ---------------------------
