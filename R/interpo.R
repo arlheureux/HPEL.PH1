@@ -85,12 +85,15 @@ interpo <- function(Data_TS_month_year_ok) {
 #
 #' Fonction qui fait un plot avec les données interpolées
 #' @param Data_TS_ok Les données
+#' @param name Nom donné à l'image
+#' @param path Chemin de sauvegarde
+#' @import ggplot2
 #' @return Les données avec colonnes de valeurs interpolées
 #
 ## ---------------------------
-interpo.plot <- function(Data_TS_ok, name = NA) {
+interpo.plot <- function(Data_TS_ok, name = NA, path) {
   
-  g <-   ggplot(data=Data_TS_ok, aes(x=YearTS, y=Val)) + 
+  g <-  ggplot(data=Data_TS_ok, aes(x=YearTS, y=Val)) + 
     geom_point() + 
     geom_point(data = Data_TS_ok[Data_TS_ok$isna == TRUE,], aes(y=fill), size=2, col="red") +
     geom_line(aes(y=fill), alpha = .7) + 
@@ -99,10 +102,10 @@ interpo.plot <- function(Data_TS_ok, name = NA) {
   
   
   # Sauvegarde dans dossier dédié
-  if(!dir.exists(file.path(OUT, "Interpolation"))){
-    dir.create(file.path(OUT, "Interpolation"), recursive = TRUE)
+  if(!dir.exists(path)){
+    dir.create(path, recursive = TRUE)
   }
   
-  gg_png(g, paste0("TS_interpolees_", name, ".png"), path = file.path(OUT, "Interpolation"))
+  gg_png(g, paste0("TS_interpolees_", name, ".png"), path = path)
  
 }
