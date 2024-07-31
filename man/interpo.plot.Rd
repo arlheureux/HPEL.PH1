@@ -4,10 +4,14 @@
 \alias{interpo.plot}
 \title{Fonction qui fait un plot avec les données interpolées}
 \usage{
-interpo.plot(Data_TS_ok, name = NA)
+interpo.plot(Data_TS_ok, name = NA, path)
 }
 \arguments{
 \item{Data_TS_ok}{Les données}
+
+\item{name}{Nom donné à l'image}
+
+\item{path}{Chemin de sauvegarde}
 }
 \value{
 Les données avec colonnes de valeurs interpolées
