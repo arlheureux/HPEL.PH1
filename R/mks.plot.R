@@ -31,7 +31,7 @@
 
 
 
-mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, Data_full_UT, Data_TS_UT_ok, res.mks.UT, groupe = NA) {
+mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, Data_full_UT, Data_TS_UT_ok, res.mks.UT, groupe = NA, year.max) {
   # Mise en place de la bar de progression :
   total <- paste(Data_TS$Site, Data_TS$Param)
   pb <- progress_bar$new(
