@@ -20,7 +20,7 @@
 #
 ## ---------------------------
 
-global.PI <- function(Data_TS_ok, GF1, GF2) {
+global.PI <- function(Data_TS_ok, GF1, GF2, path) {
     
     Data_TS_GF <- Data_TS_ok[Data_TS_ok$Param %in% c(GF1, GF2), ]
     Data_TS_GF$Anomalies <- FALSE
@@ -74,8 +74,8 @@ global.PI <- function(Data_TS_ok, GF1, GF2) {
         )
 
 
-        if (!dir.exists(file.path(OUT, "PI", s))) {
-            dir.create(file.path(OUT, "PI", s), recursive = TRUE)
+        if (!dir.exists(file.path(path, "PI", s))) {
+            dir.create(file.path(path, "PI", s), recursive = TRUE)
         }
 
         PI.plot(
@@ -83,7 +83,7 @@ global.PI <- function(Data_TS_ok, GF1, GF2) {
             dataE = df_eval[df_eval$Site == s, ],
             ds = "Rephy", GF1 = GF1, GF2 = GF2,
             col = "Month",
-            PI.hull = PI.hull, PI = PI, path = file.path(OUT, "PI", s, paste(GF1, GF2, sep="_"))
+            PI.hull = PI.hull, PI = PI, path = file.path(path, "PI", s, paste(GF1, GF2, sep="_"))
         )
 
         PI.plot(
@@ -91,14 +91,14 @@ global.PI <- function(Data_TS_ok, GF1, GF2) {
             dataE = df_eval[df_eval$Site == s, ],
             ds = "Rephy", GF1 = GF1, GF2 = GF2,
             col = "Year",
-            PI.hull = PI.hull, PI = PI, path = file.path(OUT, "PI", s, paste(GF1, GF2, sep="_"))
+            PI.hull = PI.hull, PI = PI, path = file.path(path, "PI", s, paste(GF1, GF2, sep="_"))
         )
 
         PI.anomalies.plot(
             dataR = df_ref[df_ref$Site == s, ],
             dataE = df_eval[df_eval$Site == s, ],
             ds = "Rephy", GF1 = GF1, GF2 = GF2,
-            PI.hull = PI.hull, PI = PI, path = file.path(OUT, "PI", s, paste(GF1, GF2, sep="_"))
+            PI.hull = PI.hull, PI = PI, path = file.path(path, "PI", s, paste(GF1, GF2, sep="_"))
         )
     }
 }
