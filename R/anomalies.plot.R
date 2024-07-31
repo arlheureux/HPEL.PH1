@@ -23,7 +23,7 @@
 #' @param path Chemin de sauvegarde des images
 #' @return Plots des anomalies
 #' @import grid ggpubr ggnewscale
-#' @importFrom ggplot2 ggplot aes xlim ylim geom_rect labs scale_fill_manual scale_color_manual theme_bw theme guide_legend
+#' @importFrom ggplot2 ggplot aes xlim ylim geom_rect labs scale_fill_manual scale_color_manual theme_bw theme guide_legend geom_col geom_vline scale_x_continuous
 #' @export
 ## ---------------------------
 
