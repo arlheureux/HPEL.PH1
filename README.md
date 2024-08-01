@@ -1,14 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
 # HPEL.PH1
 
-<!-- badges: start -->
-<!-- badges: end -->
+Ce package est encore en cours de développement.
 
 The goal of HPEL.PH1 is to provide code for the MFSD Descriptor
 D1-Biodiversity PH1 indicators in the French Mediterranean from pygments
-or abundance data
+or abundance data <!-- badges: end -->
+
+<!-- badges: start -->
 
 ## Installation
 
@@ -20,6 +22,9 @@ You can install the development version of HPEL.PH1 from
 pak::pak("arlheureux/HPEL.PH1")
 library(HPEL.PH1)
 ```
+
+<!-- badges: end -->
+<!-- badges: start -->
 
 ## Example
 
@@ -91,3 +96,5 @@ mks.plot(Data_full = data, Data_TS = int, mks = mks, Data_full_UT = data, Data_T
 global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval,
           path = path)
 ```
+
+<!-- badges: end -->
