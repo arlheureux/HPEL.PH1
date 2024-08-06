@@ -111,4 +111,13 @@ mks.plot(Data_full = data, Data_TS = int, mks = mks, Data_full_UT = data, Data_T
 global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval, 
           year.max = yma, path = path)
 ```
+![PI plots based on anomalies detected over](data/PI_Anomalies.png){#id .class width=100% height=50%}
+![PI plots colored based on month of sampling](data/PI_Month.png){#id .class width=100% height=50%}
+
+
+
+![PI plots colored based on year of sampling](data/PI_Year.png){#id .class width=100% height=50%}
+``` r 
+
+```
 <!-- badges: end -->

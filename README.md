@@ -112,7 +112,8 @@ anomalies.plot.freq(Freq.ano.an = ga$Freq.ano.an, path = path)
 style="width:100.0%;height:50.0%"
 alt="Frequence of each type of anomalies" />
 <img src="data/Anomalies_indice_C.png" id="id" class="class"
-style="width:100.0%;height:50.0%" />
+style="width:100.0%;height:50.0%"
+alt="Frequence of each type of anomalies" />
 
 ``` r
 # Get seasonnal mann kendall and sen slope estimages
@@ -137,7 +138,25 @@ monotonous trend in the monthly data.</figcaption>
 ``` r
 # Calculate and plot Plankton Index
 global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval, 
-          year.max = year.max, path = path)
+          year.max = yma, path = path)
+```
+
+<img src="data/PI_Anomalies.png" id="id" class="class"
+style="width:100.0%;height:50.0%"
+alt="PI plots based on anomalies detected over" />
+<img src="data/PI_Month.png" id="id" class="class"
+style="width:100.0%;height:50.0%"
+alt="PI plots colored based on month of sampling" />
+
+<figure id="id">
+<img src="data/PI_Year.png" class="class"
+style="width:100.0%;height:50.0%"
+alt="PI plots colored based on year of sampling" />
+<figcaption aria-hidden="true">PI plots colored based on year of
+sampling</figcaption>
+</figure>
+
+``` r
 ```
 
 <!-- badges: end -->
