@@ -52,7 +52,7 @@ global.PI <- function(Data_TS_ok, GF1, GF2, duree.eval, path, year.max) {
 
 
 
-    dfs <- get.df.eval.ref(Data_TS_GF, GF1, GF2)
+    dfs <- get.df.eval.ref(Data_TS_GF, GF1, GF2, year.max)
     df_eval <- dfs$eval
     df_ref <- dfs$ref
 

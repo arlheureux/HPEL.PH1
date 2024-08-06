@@ -4,7 +4,7 @@
 \alias{get.df.eval.ref}
 \title{Fonction qui crée les dataframe évaluation et référence}
 \usage{
-get.df.eval.ref(Data_TS_GF, GF1, GF2)
+get.df.eval.ref(Data_TS_GF, GF1, GF2, year.max)
 }
 \arguments{
 \item{Data_TS_GF}{Le tableau de données avec les groupes fonctionnels}
@@ -12,6 +12,8 @@ get.df.eval.ref(Data_TS_GF, GF1, GF2)
 \item{GF1}{Texte groupe fonctionnel 1}
 
 \item{GF2}{Texte groupe fonctionnel 2}
+
+\item{year.max}{Année max de l'éval}
 }
 \value{
 Le dataframe avec les groupes fonctionnels

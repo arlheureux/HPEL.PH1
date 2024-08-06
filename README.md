@@ -108,15 +108,11 @@ differences between the reference and evaluation periods.</figcaption>
 anomalies.plot.freq(Freq.ano.an = ga$Freq.ano.an, path = path)
 ```
 
-<figure id="id">
-<img src="data/" class="class" style="width:100.0%;height:50.0%"
-alt="Results from anomalies.plot(). Blue bars are positive anomalies and red bars are negative anomalies. background is coloured based in the anomalies intensity. The two tables present the frequency of each class of anomalies in the data and expected if no differences between the reference and evaluation periods." />
-<figcaption aria-hidden="true">Results from anomalies.plot(). Blue bars
-are positive anomalies and red bars are negative anomalies. background
-is coloured based in the anomalies intensity. The two tables present the
-frequency of each class of anomalies in the data and expected if no
-differences between the reference and evaluation periods.</figcaption>
-</figure>
+<img src="data/Anomalies_frequence_C.png" id="id" class="class"
+style="width:100.0%;height:50.0%"
+alt="Frequence of each type of anomalies" />
+<img src="data/Anomalies_indice_C.png" id="id" class="class"
+style="width:100.0%;height:50.0%" />
 
 ``` r
 # Get seasonnal mann kendall and sen slope estimages
@@ -126,10 +122,22 @@ mks <- get.mks(Data_TS_ok = int)
 mks.plot(Data_full = data, Data_TS = int, mks = mks, Data_full_UT = data, Data_TS_UT_ok = int, res.mks.UT = mks,
          col.param = 4, path = path, melt = F, ds = "test", groupe = "test", 
          year.max = yma)
+```
 
+<figure id="id">
+<img src="data/C_a_mksm.png" class="class"
+style="width:100.0%;height:50.0%"
+alt="Mann-Kendall plot of data. In black are all the data availables. The orange line is the monthly mean and the green dots are the Sen line when the seasonal Mann-Kendall revealed a monotonous trend in the monthly data." />
+<figcaption aria-hidden="true">Mann-Kendall plot of data. In black are
+all the data availables. The orange line is the monthly mean and the
+green dots are the Sen line when the seasonal Mann-Kendall revealed a
+monotonous trend in the monthly data.</figcaption>
+</figure>
+
+``` r
 # Calculate and plot Plankton Index
-global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval,
-          path = path)
+global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval, 
+          year.max = year.max, path = path)
 ```
 
 <!-- badges: end -->

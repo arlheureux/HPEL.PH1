@@ -15,11 +15,12 @@
 #' @param Data_TS_GF Le tableau de données avec les groupes fonctionnels
 #' @param GF1 Texte groupe fonctionnel 1
 #' @param GF2 Texte groupe fonctionnel 2
+#' @param year.max Année max de l'éval
 #' @return Le dataframe avec les groupes fonctionnels
 #
 ## ---------------------------
 
-get.df.eval.ref <- function(Data_TS_GF, GF1, GF2) {
+get.df.eval.ref <- function(Data_TS_GF, GF1, GF2, year.max) {
   
   
   # Séparation en 2 data.frames, eval et reférence

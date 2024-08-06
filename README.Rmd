@@ -93,7 +93,7 @@ anomalies.plot.freq(Freq.ano.an = ga$Freq.ano.an, path = path)
 ``` 
 
 ![Frequence of each type of anomalies](data/Anomalies_frequence_C.png){#id .class width=100% height=50%}
-![](data/Anomalies_indice_C.png){#id .class width=100% height=50%}
+![Frequence of each type of anomalies](data/Anomalies_indice_C.png){#id .class width=100% height=50%}
 
 
 ``` r 
@@ -109,6 +109,6 @@ mks.plot(Data_full = data, Data_TS = int, mks = mks, Data_full_UT = data, Data_T
 ``` r 
 # Calculate and plot Plankton Index
 global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval, 
-          year.max = year.max, path = path)
+          year.max = yma, path = path)
 ```
 <!-- badges: end -->
