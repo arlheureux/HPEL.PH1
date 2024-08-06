@@ -101,8 +101,8 @@ remove.years <- function(Data_TS_month, Year.a.enlever, prop.annee.mini, nb.core
 
     Data_TS_month_year_ok <- Data_TS_month[Data_TS_month$keep == TRUE,]
     Prop_y_elim <- 1-table(Data_TS_month_year_ok$Param, Data_TS_month_year_ok$Site)/12/range.year
-    
-    Prop_y_elim <- data.table::melt(Prop_y_elim)
+    Prop_y_elim <- as.data.frame(Prop_y_elim)
+    #Prop_y_elim$Param <- rownames(Prop_y_elim)
     colnames(Prop_y_elim) <- c("Param", "Site", "value")
     
     Prop_y_elim$Serie <- paste(Prop_y_elim$Site, Prop_y_elim$Param, sep = "_")

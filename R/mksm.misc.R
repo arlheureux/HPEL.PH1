@@ -21,10 +21,10 @@ mksm.get.seasonal.estimate <- function(mksm){
   data.frame(a= mksm$seasonal.estimate[,"slope"], 
              b= mksm$seasonal.estimate[,"intercept"], 
              Month=factor(c("Janvier", "Février", "Mars", "Avril",
-                           "Mai", "Juin", "Juillet", "AoÃƒÂ»t",
+                           "Mai", "Juin", "Juillet", "Août",
                            "Septembre", "Octobre", "Novembre", "Décembre"), 
                          levels = c("Janvier", "Février", "Mars", "Avril",
-                                    "Mai", "Juin", "Juillet", "AoÃƒÂ»t",
+                                    "Mai", "Juin", "Juillet", "Août",
                                     "Septembre", "Octobre", "Novembre", "Décembre"))
   )
 }

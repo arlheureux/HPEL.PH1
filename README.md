@@ -72,7 +72,18 @@ int <- interpo(rey)
 
 # Plot these TS
 interpo.plot(int, name = "test", path = path)
+```
 
+<figure id="id">
+<img src="data/TS_interpolees_test.png" class="class"
+style="width:100.0%;height:50.0%"
+alt="Results from interpo.plot(). Black points are data, red points are interpolated data with climatology." />
+<figcaption aria-hidden="true">Results from interpo.plot(). Black points
+are data, red points are interpolated data with
+climatology.</figcaption>
+</figure>
+
+``` r
 # Get anoamlies of the times series
 ga <- get.anomalies(data = int, year.max = yma, duree.eval = duree.eval)
 
@@ -80,10 +91,34 @@ ga <- get.anomalies(data = int, year.max = yma, duree.eval = duree.eval)
 anomalies.plot(Anomalies.R = ga$Anomalies.R, Anomalies.E = ga$Anomalies.E,
                quantiles = ga$quantiles, year.min = ymi, year.max = yma, duree.eval = duree.eval, 
                Freq.ano = ga$Freq.ano, chi2 = ga$chi2, path = path)
+```
 
+<figure id="id">
+<img src="data/Anomalies_C_a.png" class="class"
+style="width:100.0%;height:50.0%"
+alt="Results from anomalies.plot(). Blue bars are positive anomalies and red bars are negative anomalies. background is coloured based in the anomalies intensity. The two tables present the frequency of each class of anomalies in the data and expected if no differences between the reference and evaluation periods." />
+<figcaption aria-hidden="true">Results from anomalies.plot(). Blue bars
+are positive anomalies and red bars are negative anomalies. background
+is coloured based in the anomalies intensity. The two tables present the
+frequency of each class of anomalies in the data and expected if no
+differences between the reference and evaluation periods.</figcaption>
+</figure>
+
+``` r
 anomalies.plot.freq(Freq.ano.an = ga$Freq.ano.an, path = path)
+```
 
+<figure id="id">
+<img src="data/" class="class" style="width:100.0%;height:50.0%"
+alt="Results from anomalies.plot(). Blue bars are positive anomalies and red bars are negative anomalies. background is coloured based in the anomalies intensity. The two tables present the frequency of each class of anomalies in the data and expected if no differences between the reference and evaluation periods." />
+<figcaption aria-hidden="true">Results from anomalies.plot(). Blue bars
+are positive anomalies and red bars are negative anomalies. background
+is coloured based in the anomalies intensity. The two tables present the
+frequency of each class of anomalies in the data and expected if no
+differences between the reference and evaluation periods.</figcaption>
+</figure>
 
+``` r
 # Get seasonnal mann kendall and sen slope estimages
 mks <- get.mks(Data_TS_ok = int)
 

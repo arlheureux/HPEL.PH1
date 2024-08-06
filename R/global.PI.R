@@ -20,7 +20,7 @@
 #
 ## ---------------------------
 
-global.PI <- function(Data_TS_ok, GF1, GF2, duree.eval, path) {
+global.PI <- function(Data_TS_ok, GF1, GF2, duree.eval, path, year.max) {
     
     Data_TS_GF <- Data_TS_ok[Data_TS_ok$Param %in% c(GF1, GF2), ]
     Data_TS_GF$Anomalies <- FALSE

@@ -7,7 +7,7 @@
 Moyenne_integree(x, by, from, to)
 }
 \arguments{
-\item{x}{Numérique : les valeurs ÃƒÂ  inrégrer}
+\item{x}{Numérique : les valeurs à inrégrer}
 
 \item{by}{Numérique : les jours juliens}
 

@@ -7,13 +7,13 @@
 Moyenne_integree_profondeur(x, by, from, to)
 }
 \arguments{
-\item{x}{Numérique : les valeurs ÃƒÂ  inrégrer}
+\item{x}{Numérique : les valeurs à inrégrer}
 
 \item{by}{Numérique : les profondeurs}
 
-\item{from}{Numérique : profondeur mini}
+\item{from}{Numérique : profondeur mini à intégrer}
 
-\item{to}{Numérique : profondeur maxi}
+\item{to}{Numérique : profondeur maxi à intégrer}
 }
 \value{
 valeurs moyennée

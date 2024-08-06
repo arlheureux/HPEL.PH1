@@ -42,17 +42,20 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
 
   # Pour nommer dans la barre de progression
   l <-
-    ifelse(groupe == "data_phyto_ut", "Unités taxinomiques",
-      ifelse(groupe == "data_phyto_ct", "Classes de taille",
+    ifelse(groupe %in% c("data_phyto_ut", "UT"), "Unités taxinomiques",
+    ifelse(groupe %in% c("UT.groupées"), "Unités taxinomiques Zoo",
+      ifelse(groupe %in% c("data_phyto_ct", "Taille"), "Classes de taille",
         ifelse(groupe == "data_phyto_bd", "Bacillariophyceae et Dinophyceae",
           ifelse(groupe == "data_phyto_bt", "Bacillariophyceae toxiques et Bacillariophyceae totales",
             ifelse(groupe == "data_phyto_dt", "Dinophyceae toxiques et Dinophyceae totales", 
-             ifelse(groupe == "Pigments", "Pigments", "NA")
-             )
+             ifelse(groupe == "Pigments", "Pigments", 
+              ifelse(groupe == "Copepods", "Copepods", "NA")
+              )
+            )
           )
         )
       )
-    )
+    ))
 
 
 
@@ -339,7 +342,7 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
 
 
       # Si un mois est sig alors je vais chercher les UT pour ce mois
-      if (any(!is.na(Sen_df$y)) & ds == "Rephy" & !x %in% c("micro", "nano", "pico") & l != "Unités taxinomiques") {
+      if (any(!is.na(Sen_df$y)) & ds %in% c("Rephy", "Zoo") & !x %in% c("micro", "nano", "pico") & l != "Unités taxinomiques") {
 
         if (x == "Dinophyceae") {
           # Alors je suis dans les données avec que les Baci et les Dino

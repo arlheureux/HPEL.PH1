@@ -12,7 +12,7 @@
 ## _________________ Notes
 #
 #' Fonction qui effectue une moyenne intégrée sur les jours juliens
-#' @param x Numérique : les valeurs ÃƒÂ  inrégrer
+#' @param x Numérique : les valeurs à inrégrer
 #' @param by Numérique : les jours juliens
 #' @param from Numérique : jour julien mini
 #' @param to Numérique : jour julien maxi
@@ -83,17 +83,17 @@ Moyenne_integree <- function(x, by, from, to) {
 ## _________________ Notes
 #
 #' Fonction qui effectue une moyenne intégrée sur la profondeur
-#' @param x Numérique : les valeurs ÃƒÂ  inrégrer
+#' @param x Numérique : les valeurs à inrégrer
 #' @param by Numérique : les profondeurs
-#' @param from Numérique : profondeur mini
-#' @param to Numérique : profondeur maxi
+#' @param from Numérique : profondeur mini à intégrer
+#' @param to Numérique : profondeur maxi à intégrer
 #' @return valeurs moyennée
 #
 ## ---------------------------
 Moyenne_integree_profondeur <- function(x, by, from, to) {
   
   if(any(is.na(x))){
-    cat("Les valeurs manquantes sont enlevées = on saute un prélÃƒÂ¨vement\n")
+    cat("Les valeurs manquantes sont enlevées = on saute un prélèvement\n")
     by <- by[!is.na(x)]
     x <- x[!is.na(x)]
   }
@@ -141,15 +141,23 @@ Moyenne_integree_profondeur <- function(x, by, from, to) {
       
       # Cas du dernier (jour du mois ou prof.max > to)
       # je ne veux passer ici qu'une seule fois
-        if(to <= by[i]){
-          if(to == by[i]){
+      if(length(x) == i){
+        # Plus basse profondeur = to
+        if(to == by[i]){
             m <- m
-          }else{
-            m <- m * (to-by[i-1]) / abs(diff(tmp_by))
-          }
-          
-          stop <- TRUE
         }
+
+        # to est moins profond que la plus basse profondeur (ici by[i-1] et pas by[i] car je fais comme si dernière prof = to)
+        if (to < by[i]) {
+          m <- m * (to - by[i - 1]) / abs(diff(tmp_by))
+        }
+
+        #to est plus profond que la plus basse profondeur 
+        if (to > by[i]) {
+          m <- m * (to - by[i - 1]) / abs(diff(tmp_by))
+        }
+      }
+
       
       
       Means <- c(Means, m)
@@ -157,7 +165,7 @@ Moyenne_integree_profondeur <- function(x, by, from, to) {
       if(isTRUE(stop)) break()
     }
     
-    out <- sum(Means) / (to-from)
+    out <- sum(Means) / abs(diff(c(to,from)))
     c
   }else{
     out <- NA
