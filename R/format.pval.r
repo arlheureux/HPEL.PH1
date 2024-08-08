@@ -22,7 +22,7 @@ format.pval <- function(pval) {
     ifelse(pval < 0.001, "< 0.001",
         ifelse(pval < 0.01 & pval >= 0.001, "< 0.01",
             ifelse(pval < 0.05 & pval >= 0.01, "< 0.05",
-                paste0(" = ", round(pval, 2))
+                paste0("= ", round(pval, 2))
             )
         )
     )

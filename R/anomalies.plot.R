@@ -40,10 +40,14 @@ anomalies.plot <- function(Anomalies.R, Anomalies.E, quantiles, year.min, year.m
       quantiles.s <- quantiles[quantiles$Site == s & quantiles$Param == p, ]
       Freq.ano.s <- Freq.ano[Freq.ano$Site == s & Freq.ano$Param == p, ]
 
+      
+      p <- gsub("\\(", "\\\\(", p)
+      p <- gsub("\\)", "\\\\)", p)
+      
       n <- grep(p, names(chi2), value = TRUE)
       n <- grep(s, n, value = TRUE)
       n <- which(names(chi2) %in% n)
-      chi2.s <- chi2
+      chi2.s <- chi2[n]
       chi2.s <- setNames(chi2.s, gsub("_.*", "", names(chi2.s)))
 
       Anomalies.R.s$sign <- ifelse(Anomalies.R.s$Ano > 0, "Positive", "Negative")
@@ -174,12 +178,12 @@ anomalies.plot <- function(Anomalies.R, Anomalies.E, quantiles, year.min, year.m
 
       if (chi2.s$p >= 0.05) {
         text <- paste0(
-          "Chi2 = ", round(chi2.s$x, 3), "\npvalue = ", pval,
+          "Chi2 = ", round(chi2.s$x, 3), "\npvalue", pval,
           "\n--> il n'y a pas de différence entre la proportion d'anomalies de la période de référence et de la période d'évaluation"
         )
       } else {
         text <- paste0(
-          "Chi2 = ", round(chi2.s$x, 3), "\npvalue = ", pval,
+          "Chi2 = ", round(chi2.s$x, 3), "\npvalue", pval,
           "\n--> il y a une différence entre la proportion d'anomalies de la période de référence et de la période d'évaluation"
         )
       }
@@ -218,7 +222,7 @@ anomalies.plot <- function(Anomalies.R, Anomalies.E, quantiles, year.min, year.m
         heights = c(1, .5)
       )
 
-      # Sauvegarde dans dossier dédié
+            # Sauvegarde dans dossier dédié
       if (!dir.exists(path)) {
         dir.create(path, recursive = TRUE)
       }

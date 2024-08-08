@@ -78,7 +78,7 @@ interpo.plot(int, name = "test", path = path)
 
 ``` r 
 # Get anoamlies of the times series
-ga <- get.anomalies(data = int, year.max = yma, duree.eval = duree.eval)
+ga <- get.anomalies(data = int, year.max = yma, duree.eval = duree.eval, Ref_or_TS = "Ref)
 
 # Plot them
 anomalies.plot(Anomalies.R = ga$Anomalies.R, Anomalies.E = ga$Anomalies.E,
@@ -112,12 +112,14 @@ global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval,
           year.max = yma, path = path)
 ```
 ![PI plots based on anomalies detected over](data/PI_Anomalies.png){#id .class width=100% height=50%}
+
+
+
+
 ![PI plots colored based on month of sampling](data/PI_Month.png){#id .class width=100% height=50%}
 
 
 
-![PI plots colored based on year of sampling](data/PI_Year.png){#id .class width=100% height=50%}
-``` r 
 
-```
+![PI plots colored based on year of sampling](data/PI_Year.png){#id .class width=100% height=50%}
 <!-- badges: end -->

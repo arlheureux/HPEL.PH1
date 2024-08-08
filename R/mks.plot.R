@@ -44,12 +44,12 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
   l <-
     ifelse(groupe %in% c("data_phyto_ut", "UT"), "Unités taxinomiques",
     ifelse(groupe %in% c("UT.groupées"), "Unités taxinomiques Zoo",
-      ifelse(groupe %in% c("data_phyto_ct", "Taille"), "Classes de taille",
+      ifelse(groupe %in% c("data_phyto_ct", "Taille", "Copepods.taille"), "Classes de taille",
         ifelse(groupe == "data_phyto_bd", "Bacillariophyceae et Dinophyceae",
           ifelse(groupe == "data_phyto_bt", "Bacillariophyceae toxiques et Bacillariophyceae totales",
             ifelse(groupe == "data_phyto_dt", "Dinophyceae toxiques et Dinophyceae totales", 
              ifelse(groupe == "Pigments", "Pigments", 
-              ifelse(groupe == "Copepods", "Copepods", "NA")
+              ifelse(groupe == "Gelatineux", "Gelatineux", "NA")
               )
             )
           )
@@ -65,7 +65,7 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
     tmp <- Data_TS[Data_TS$Site == s, ]
 
     for (x in unique(tmp$Param)) {
-      # cat("On traite le paramÃƒÂ¨tre :", x, "au site :", s, "\n\n")
+      # cat("On traite le paramètre :", x, "au site :", s, "\n\n")
 
 
       # Mise en place de la bar de progression :
@@ -221,12 +221,17 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
         br <- seq(min(data.x$Year), max(data.x$Year))[seq(min(data.x$Year), max(data.x$Year)) %% 5 == 0]
       }
 
-      if (ds == "Rephy") {
+      if (ds %in% c("Rephy")) {
         unit <- bquote("(cell.L"^"-1" * ")")
-      } else {
+      }
+      
+      if (ds %in% c("Boussole", "PhytoCly")) {
         unit <- bquote("(ng.L"^"-1" * ")")
       }
-
+      
+      if (ds %in% c("Zoo")) {
+        unit <- bquote("(individu .m"^"-3" * ")")
+      }
 
       if(median(mksm$p.value.s[-1]) < 0.05){
         Data_full_melt$Site2 <- paste(Data_full_melt$Site, lab_moy_df, sep = "\n")
@@ -299,7 +304,7 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
         G2 <- G2 + ylab(bquote(.(param)[pico] * " (ng.L"^"-1" * ")"))
       }
 
-      # Je récupÃƒÂ¨re la taille des facets
+      # Je récupère la taille des facets
       # g <- ggplot_gtable(ggplot_build(G2))
 
 
@@ -342,7 +347,12 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
 
 
       # Si un mois est sig alors je vais chercher les UT pour ce mois
-      if (any(!is.na(Sen_df$y)) & ds %in% c("Rephy", "Zoo") & !x %in% c("micro", "nano", "pico") & l != "Unités taxinomiques") {
+      if (
+        any(!is.na(Sen_df$y)) & 
+        ds %in% c("Rephy", "Zoo") & 
+        #!x %in% c("micro", "nano", "pico") & 
+        !l %in% c("Unités taxinomiques", "Classes de taille")
+        ) {
 
         if (x == "Dinophyceae") {
           # Alors je suis dans les données avec que les Baci et les Dino
@@ -364,6 +374,15 @@ mks.plot <- function(Data_full, Data_TS, mks, col.param, path, melt = TRUE, ds, 
           # Alors je suis dans les données avec que les Baci et les Dino
           Data_full_UT_x <- Data_full_UT[Data_full_UT$Class == "Dinophyceae" & Data_full_UT$Site == s &
             Data_full_UT$Toxicite == TRUE, ]
+        }
+        
+        if (x == "Gelatineux") {
+          # Alors je suis dans les données avec que les Baci et les Dino
+          Data_full_UT_x <- Data_full_UT[Data_full_UT$UT %in% c(
+            "Cnidaria (autres)", "Tunicata (autres)", "Ctenophora", 
+            "Doliolida", "Fritillariidae", "Hydrozoa (autres)",
+            "Oikopleuridae", "Salpida", "Siphonophorae"
+          ) &  Data_full_UT$Site == s, ]
         }
 
 

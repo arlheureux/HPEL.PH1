@@ -85,7 +85,7 @@ climatology.</figcaption>
 
 ``` r
 # Get anoamlies of the times series
-ga <- get.anomalies(data = int, year.max = yma, duree.eval = duree.eval)
+ga <- get.anomalies(data = int, year.max = yma, duree.eval = duree.eval, Ref_or_TS = "Ref)
 
 # Plot them
 anomalies.plot(Anomalies.R = ga$Anomalies.R, Anomalies.E = ga$Anomalies.E,
@@ -141,22 +141,22 @@ global.PI(Data_TS_ok = int, GF1 = "A", GF2 = "B", duree.eval = duree.eval,
           year.max = yma, path = path)
 ```
 
-<img src="data/PI_Anomalies.png" id="id" class="class"
+<figure id="id">
+<img src="data/PI_Anomalies.png" class="class"
 style="width:100.0%;height:50.0%"
 alt="PI plots based on anomalies detected over" />
-<img src="data/PI_Month.png" id="id" class="class"
-style="width:100.0%;height:50.0%"
-alt="PI plots colored based on month of sampling" />
+<figcaption aria-hidden="true">PI plots based on anomalies detected
+over</figcaption>
+</figure>
 
 <figure id="id">
-<img src="data/PI_Year.png" class="class"
+<img src="data/PI_Month.png" class="class"
 style="width:100.0%;height:50.0%"
-alt="PI plots colored based on year of sampling" />
-<figcaption aria-hidden="true">PI plots colored based on year of
+alt="PI plots colored based on month of sampling" />
+<figcaption aria-hidden="true">PI plots colored based on month of
 sampling</figcaption>
 </figure>
 
-``` r
-```
-
-<!-- badges: end -->
+<img src="data/PI_Year.png" id="id" class="class"
+style="width:100.0%;height:50.0%"
+alt="PI plots colored based on year of sampling" /> <!-- badges: end -->

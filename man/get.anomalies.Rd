@@ -4,7 +4,7 @@
 \alias{get.anomalies}
 \title{Fonction qui fait les plots de mann kendall saisonniers}
 \usage{
-get.anomalies(data, year.max, duree.eval)
+get.anomalies(data, year.max, duree.eval, Ref_or_TS)
 }
 \arguments{
 \item{data}{Tableau de données brutes}
@@ -12,6 +12,8 @@ get.anomalies(data, year.max, duree.eval)
 \item{year.max}{Année max de la TS}
 
 \item{duree.eval}{Durée de la période d'évaluation en année}
+
+\item{Ref_or_TS}{Choose if anomalies are to be calculated on whole time series (TS) or only on reference period (Ref)}
 }
 \value{
 Les valeurs des anomalies
